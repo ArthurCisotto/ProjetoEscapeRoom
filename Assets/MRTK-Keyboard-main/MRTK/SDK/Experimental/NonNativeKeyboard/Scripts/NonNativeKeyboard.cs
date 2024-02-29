@@ -244,6 +244,15 @@ namespace Microsoft.MixedReality.Toolkit.Experimental.UI
         /// </summary>
         //private IMixedRealityDictationSystem dictationSystem;
 
+        public AudioSource keyTapSound;
+        
+        public void PlayKeyClick()
+        {
+            if (keyTapSound != null)
+            {
+                keyTapSound.Play();
+            }
+        }
         /// <summary>
         /// Deactivate on Awake.
         /// </summary>

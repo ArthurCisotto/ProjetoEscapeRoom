@@ -64,6 +64,7 @@ namespace Microsoft.MixedReality.Toolkit.Experimental.UI
         private void FireAppendValue()
         {
             Keyboard.AppendValue(this);
+            Keyboard.PlayKeyClick();
         }
 
         /// <summary>

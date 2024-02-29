@@ -10,6 +10,9 @@ public class ShowKeyboard : MonoBehaviour
     public GameObject mug;
     public TMP_InputField inputField;
 
+    public AudioSource successSound;
+    public AudioSource drawerSound;
+
     public NonNativeKeyboard keyboard; 
     // Start is called before the first frame update
     void Start()
@@ -29,9 +32,15 @@ public class ShowKeyboard : MonoBehaviour
     {
         if (inputField.text == "GXq2Cw")
         {
+            successSound.Play();
             drawerHandle.SetActive(true);
             mug.SetActive(true);
+            // Schedule the drawer sound to play after 2 seconds
+            Invoke("PlayDrawerSound", 1.0f);
         }
     }
-
+    private void PlayDrawerSound()
+    {
+        drawerSound.Play();
+    }
 }

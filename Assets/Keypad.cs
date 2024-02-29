@@ -8,8 +8,10 @@ public class Keypad : MonoBehaviour
 {
     public TMP_InputField inputField;
     public GameObject doorHandle;
-
     public NonNativeKeyboard keypad;
+    public AudioSource successSound;
+    public AudioSource failSound;
+    public AudioSource doorSound;
     // Start is called before the first frame update
     void Start()
     {   
@@ -27,12 +29,26 @@ public class Keypad : MonoBehaviour
         }
     }
 
+
     public void CheckPassword()
-    {   
+    {
         if (inputField.text == "5832")
         {
+            successSound.Play();
             doorHandle.SetActive(true);
+            
+            // Schedule the door sound to play after 2 seconds
+            Invoke("PlayDoorSound", 1.0f);
+        }
+        else
+        {
+            failSound.Play();
         }
         inputField.text = "";
+    }
+
+    private void PlayDoorSound()
+    {
+        doorSound.Play();
     }
 }
