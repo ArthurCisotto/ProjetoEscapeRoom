@@ -16,6 +16,8 @@ namespace Microsoft.MixedReality.Toolkit.Experimental.UI
         /// <summary>
         /// Possible functionality for a button.
         /// </summary>
+        
+        public NonNativeKeyboard Keyboard;
         public enum Function
         {
             // Commands
@@ -60,7 +62,7 @@ namespace Microsoft.MixedReality.Toolkit.Experimental.UI
         /// </summary>
         private void FireFunctionKey()
         {
-            NonNativeKeyboard.Instance.FunctionKey(this);
+            Keyboard.FunctionKey(this);
         }
     }
 }

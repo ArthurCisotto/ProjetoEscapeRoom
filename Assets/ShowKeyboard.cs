@@ -9,6 +9,8 @@ public class ShowKeyboard : MonoBehaviour
     public GameObject drawerHandle;
     public GameObject mug;
     public TMP_InputField inputField;
+
+    public NonNativeKeyboard keyboard; 
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +21,8 @@ public class ShowKeyboard : MonoBehaviour
 
     public void OpenKeyboard()
     {
-        NonNativeKeyboard.Instance.InputField = inputField;
-        NonNativeKeyboard.Instance.PresentKeyboard(inputField.text);
+        keyboard.InputField = inputField;
+        keyboard.PresentKeyboard(inputField.text);
     }
 
     public void CheckPassword()

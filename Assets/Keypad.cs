@@ -7,15 +7,15 @@ using Microsoft.MixedReality.Toolkit.Experimental.UI;
 public class Keypad : MonoBehaviour
 {
     public TMP_InputField inputField;
-    public GameObject keypad;
     public GameObject doorHandle;
 
+    public NonNativeKeyboard keypad;
     // Start is called before the first frame update
     void Start()
     {   
-        keypad.SetActive(true);
-        NonNativeKeyboard.Instance.InputField = inputField;
-        NonNativeKeyboard.Instance.PresentKeyboard(inputField.text);
+        //keypad.SetActive(true);
+        keypad.InputField = inputField;
+        keypad.PresentKeyboard(inputField.text);
         //inputField.onValueChanged.AddListener(x => CheckPassword());
         inputField.onValueChanged.AddListener(x => CheckIf4Digits());
         

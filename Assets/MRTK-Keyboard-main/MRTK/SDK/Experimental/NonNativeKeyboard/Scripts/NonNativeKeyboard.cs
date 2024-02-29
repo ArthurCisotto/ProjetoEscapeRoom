@@ -21,7 +21,7 @@ namespace Microsoft.MixedReality.Toolkit.Experimental.UI
     ///       get the textEntered event.
     public class NonNativeKeyboard : MonoBehaviour
     {
-        public static NonNativeKeyboard Instance { get; private set; }
+        //public static NonNativeKeyboard Instance { get; private set; }
 
         /// <summary>
         /// Layout type enum for the type of keyboard layout to use.  
@@ -249,7 +249,7 @@ namespace Microsoft.MixedReality.Toolkit.Experimental.UI
         /// </summary>
         void Awake()
         {
-            Instance = this;
+            //Instance = this;
 
             m_StartingScale = transform.localScale;
             Bounds canvasBounds = RectTransformUtility.CalculateRelativeRectTransformBounds(transform);
@@ -394,7 +394,7 @@ namespace Microsoft.MixedReality.Toolkit.Experimental.UI
             //    dictationSystem.StopRecording();
             //}
 
-            Instance = null;
+            //Instance = null;
         }
 
         #region Present Functions

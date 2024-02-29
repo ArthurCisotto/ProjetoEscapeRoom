@@ -24,6 +24,8 @@ namespace Microsoft.MixedReality.Toolkit.Experimental.UI
         /// </summary>
         public string ShiftValue;
 
+        public NonNativeKeyboard Keyboard;
+
         /// <summary>
         /// Reference to child text element.
         /// </summary>
@@ -53,7 +55,7 @@ namespace Microsoft.MixedReality.Toolkit.Experimental.UI
             m_Button.onClick.RemoveAllListeners();
             m_Button.onClick.AddListener(FireAppendValue);
 
-            NonNativeKeyboard.Instance.OnKeyboardShifted += Shift;
+            Keyboard.OnKeyboardShifted += Shift;
         }
 
         /// <summary>
@@ -61,7 +63,7 @@ namespace Microsoft.MixedReality.Toolkit.Experimental.UI
         /// </summary>
         private void FireAppendValue()
         {
-            NonNativeKeyboard.Instance.AppendValue(this);
+            Keyboard.AppendValue(this);
         }
 
         /// <summary>

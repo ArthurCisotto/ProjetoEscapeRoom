@@ -10,6 +10,8 @@ public class TriggerRays : MonoBehaviour
     public GameObject LeftRayInteractor;
     public GameObject RightRayInteractor;
 
+    public NonNativeKeyboard Keyboard;
+
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == targetTag)
         {
@@ -23,7 +25,7 @@ public class TriggerRays : MonoBehaviour
         {
             LeftRayInteractor.SetActive(false);
             RightRayInteractor.SetActive(false);
-            NonNativeKeyboard.Instance.Close();
+            Keyboard.Close();
         }
     }
 }
