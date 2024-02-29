@@ -18893,7 +18893,7 @@ MonoBehaviour:
   targetTag: Player
   LeftRayInteractor: {fileID: 33268366}
   RightRayInteractor: {fileID: 2142471977}
-  Keyboard: {fileID: 0}
+  Keyboard: {fileID: 217149238}
 --- !u!65 &1550178273
 BoxCollider:
   m_ObjectHideFlags: 0
