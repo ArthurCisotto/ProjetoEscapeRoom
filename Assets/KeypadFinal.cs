@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using Microsoft.MixedReality.Toolkit.Experimental.UI;
 
-public class Keypad : MonoBehaviour
+public class KeypadFinal : MonoBehaviour
 {
     public TMP_InputField inputField;
     public GameObject doorHandle;
@@ -29,7 +29,7 @@ public class Keypad : MonoBehaviour
 
     public void CheckPassword()
     {   
-        if (inputField.text == "5832")
+        if (inputField.text == "1209")
         {
             doorHandle.SetActive(true);
         }
